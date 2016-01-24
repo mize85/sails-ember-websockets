@@ -1,0 +1,13 @@
+{{#each model as |post|}}
+
+    <h2>{{post.name}}</h2>
+    <p>{{post.body}}</p>
+    <p>{{post.created}}</p>
+
+{{/each}}
+
+
+{{input value=name}}
+{{input value=body}}
+
+<button {{action "savePost"}}>Save</button>
