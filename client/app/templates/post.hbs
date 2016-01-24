@@ -1,13 +1,15 @@
-{{#each model as |post|}}
+<div class="container-fluid bg-3 text-center">
+    {{#each model as |post|}}
 
-    <h2>{{post.name}}</h2>
-    <p>{{post.body}}</p>
-    <p>{{post.created}}</p>
+        <h2>{{post.name}}</h2>
+        <p>{{post.body}}</p>
+        <p>{{post.created}}</p>
 
-{{/each}}
+    {{/each}}
 
 
-{{input value=name}}
-{{input value=body}}
+    {{input value=name}}
+    {{input value=body}}
 
-<button {{action "savePost"}}>Save</button>
+    <button {{action "savePost"}}>Save</button>
+</div>
