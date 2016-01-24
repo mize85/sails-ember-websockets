@@ -20,7 +20,7 @@ export default SailsSocketAdapter.extend(DataAdapterMixin, {
   /**
    * Whether to use CSRF tokens or not
    */
-  useCSRF:              true,
+  useCSRF:              false, //true,
 
     log: true,
   /**
