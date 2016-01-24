@@ -20,9 +20,9 @@
                 <li> {{#link-to 'index'}}Home{{/link-to}}</li>
                 <li> {{#link-to 'register'}}Register{{/link-to}}</li>
                 {{#if session.isAuthenticated}}
+                    <li>{{#link-to 'chat'}}Chat{{/link-to}}</li>
                     <li>{{#link-to 'post'}}Post{{/link-to}}</li>
-                {{/if}}
-                {{#if session.isAuthenticated}}
+                    <li>{{#link-to 'users'}}Users{{/link-to}}</li>
                     <li class="pointer"><a {{ action 'invalidateSession' }}>Logout</a></li>
                 {{else}}
                     <li class="pointer">{{#link-to 'login'}}Login{{/link-to}}</li>

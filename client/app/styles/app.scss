@@ -5,6 +5,10 @@ $red: #d62d20;
 $yellow: #ffa700;
 $white: #eee;
 
+$lightgreen: #1abc9c;
+$darkblue: #474e5d;
+$blackgray: #2f2f2f;
+
 // scaling... any units
 $width: 100px;
 
@@ -15,6 +19,7 @@ $width: 100px;
 
 // COMPONENTS
 @import "components/table";
+@import "components/chat-message";
 
 // ADDONS
 $ember-power-select-line-height: 2;
@@ -51,23 +56,27 @@ body {
   margin-top: 70px;
 }
 
+.chat-message{
+  color: $blackgray;
+}
+
 p {font-size: 16px;}
 .margin {margin-bottom: 45px;}
 .bg-1 {
-  background-color: #1abc9c; /* Green */
-  color: #ffffff;
+  background-color: $lightgreen; /* Green */
+  color: $white;
 }
 .bg-2 {
-  background-color: #474e5d; /* Dark Blue */
-  color: #ffffff;
+  background-color: $darkblue; /* Dark Blue */
+  color: $white;
 }
 .bg-3 {
-  background-color: #ffffff; /* White */
+  background-color: $white; /* White */
   color: #555555;
 }
 .bg-4 {
-  background-color: #2f2f2f; /* Black Gray */
-  color: #fff;
+  background-color: $blackgray; /* Black Gray */
+  color: $white;
 }
 .container-fluid {
   padding-top: 70px;

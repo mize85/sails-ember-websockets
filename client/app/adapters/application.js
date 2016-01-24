@@ -31,7 +31,7 @@ export default SailsSocketAdapter.extend(DataAdapterMixin, {
   /**
    * Whether to group multiple find by ID with one request with a `where`
    */
-  coalesceFindRequests: true,
+  //coalesceFindRequests: true,
   /**
    * The namespace of your API
    */

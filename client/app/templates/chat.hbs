@@ -1,0 +1,11 @@
+<div class="container-fluid bg-3 text-center">
+    {{#each model as |message|}}
+        <div class="row">
+            {{chat-message model=message currentUser=session.session.authenticated.user.id}}
+        </div>
+    {{/each}}
+
+    {{input value=text}}
+
+    <button {{action "saveMessage"}}>Save</button>
+</div>

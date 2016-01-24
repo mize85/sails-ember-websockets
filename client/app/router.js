@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('login');
   this.route('protected');
   this.route('register');
+  this.route('chat');
+  this.route('users');
 });
 
 export default Router;
