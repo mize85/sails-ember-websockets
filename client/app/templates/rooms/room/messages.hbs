@@ -1,14 +1,1 @@
-<form {{action 'saveMessage' model on='submit' }}>
-    <div class="form-group">
-        <label for="message">Message</label>
-        {{input id='message' placeholder='Enter your Message' class='form-control' value=text}}
-    </div>
-    <button class="btn btn-primary" type="submit">Send</button>
-</form>
 
-
-{{#each model as |message|}}
-    <div class="row">
-        {{chat-message model=message currentUser=session.session.authenticated.user.id}}
-    </div>
-{{/each}}

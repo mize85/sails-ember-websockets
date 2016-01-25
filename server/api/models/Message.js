@@ -12,7 +12,7 @@ module.exports = {
 
     text : { type: 'string' },
 
-    room : { model: 'Room' }
+    //room : { model: 'Room' }
   }
 };
 
