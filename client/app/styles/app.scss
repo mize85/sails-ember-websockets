@@ -8,6 +8,7 @@ $white: #eee;
 $lightgreen: #1abc9c;
 $darkblue: #474e5d;
 $blackgray: #2f2f2f;
+$lightgrey: #f5f6f7;
 
 // scaling... any units
 $width: 100px;
@@ -49,7 +50,7 @@ $ember-power-select-trigger-contiguous-border: 1px solid $ember-power-select-bor
 body {
   font: 20px Montserrat, sans-serif;
   line-height: 1.8;
-  color: #f5f6f7;
+  color: $blackgray;
 }
 
 .main{
@@ -64,19 +65,15 @@ p {font-size: 16px;}
 .margin {margin-bottom: 45px;}
 .bg-1 {
   background-color: $lightgreen; /* Green */
-  color: $white;
 }
 .bg-2 {
   background-color: $darkblue; /* Dark Blue */
-  color: $white;
 }
 .bg-3 {
   background-color: $white; /* White */
-  color: #555555;
 }
 .bg-4 {
   background-color: $blackgray; /* Black Gray */
-  color: $white;
 }
 .container-fluid {
   padding-top: 70px;
