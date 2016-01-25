@@ -14,7 +14,6 @@ Router.map(function() {
   this.route('users');
   this.route('rooms', function() {
     this.route('room', { path: '/:room_id' }, function() {
-      this.route('messages');
     });
   });
 });

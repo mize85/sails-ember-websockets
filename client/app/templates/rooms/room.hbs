@@ -1,25 +1,25 @@
 <div class="row">
-    <h2>{{model.name}}</h2>
+    <div class="col-md-12">
+        <h2>{{model.name}}</h2>
+    </div>
 </div>
 
 <div class="row">
-    <div class="container-fluid bg-3">
-        <div class="col-md-12">
-            <form {{action 'saveMessage' model on='submit' }}>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    {{input id='message' placeholder='Enter your Message' class='form-control' value=text}}
-                </div>
-                <button class="btn btn-primary" type="submit">Send</button>
-            </form>
+    <div class="col-md-12">
+        <form {{action 'saveMessage' model on='submit' }}>
+            <div class="form-group">
+                <label for="message">Message</label>
+                {{input id='message' placeholder='Enter your Message' class='form-control' value=text}}
+            </div>
+            <button class="btn btn-primary" type="submit">Send</button>
+        </form>
 
 
-            {{#each model.messages as |message|}}
-                <div class="row">
-                    {{chat-message model=message currentUser=session.session.authenticated.user.id}}
-                </div>
-            {{/each}}
-        </div>
+        {{#each model.messages as |message|}}
+            <div class="row">
+                {{chat-message model=message currentUser=session.session.authenticated.user.id}}
+            </div>
+        {{/each}}
     </div>
 </div>
 
