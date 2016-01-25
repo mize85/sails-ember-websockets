@@ -6,19 +6,34 @@ export default Ember.Controller.extend({
 
     actions: {
         saveMessage(){
-            var text = this.get('text');
-            var created = new Date();
+            let text = this.get('text');
+            let room = this.get('model');
+            let self = this;
+
             var userId = this.get('session.session.authenticated.user.id');
 
             this.store.find('user', userId).then((user) => {
                 let msg = this.store.createRecord('message', {
                     text: text,
-                    user: user
+                    user: user,
+                    room: room
                 });
 
                 msg.save().then(function(response){
                     Ember.Logger.debug("success");
                     Ember.Logger.debug(response);
+
+                    room.get('messages').pushObject(response);
+
+                    room.save().then((response) => {
+                        Ember.Logger.debug("success");
+                        Ember.Logger.debug(response);
+                    }, (error) => {
+                        Ember.Logger.debug(error);
+                    }).finally(()=>{
+                        self.set('text', null);
+                    });
+
                 }, function(error){
                     Ember.Logger.debug(error);
                 });
@@ -26,9 +41,6 @@ export default Ember.Controller.extend({
             }, function(error){
                 Ember.Logger.debug(error);
             });
-
-
-
         }
     }
 });

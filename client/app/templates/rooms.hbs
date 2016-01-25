@@ -1,0 +1,28 @@
+<div class="container-fluid bg-3">
+    <div class="row">
+        <div class="col-md-3">
+            <ul>
+                {{#each model as |room|}}
+                    <li>
+                        {{#link-to "rooms.room.messages" room}}
+                            {{room.name}}
+                        {{/link-to}}
+                    </li>
+                {{/each}}
+
+                <form {{action 'createRoom' model on='submit' }}>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        {{input id='name' placeholder='Enter Room Name' class='form-control' value=name}}
+                    </div>
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </form>
+            </ul>
+        </div>
+
+        <div class="col-md-9">
+            {{outlet}}
+        </div>
+    </div>
+</div>
+

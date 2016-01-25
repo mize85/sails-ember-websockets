@@ -22,7 +22,7 @@ module.exports = {
                 user: user
             });
         });
-    },/*
+    }/*,
 
     find: function(req, res){
 

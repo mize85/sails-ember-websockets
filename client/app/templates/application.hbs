@@ -22,6 +22,7 @@
                 {{#if session.isAuthenticated}}
                     <li>{{#link-to 'chat'}}Chat{{/link-to}}</li>
                     <li>{{#link-to 'users'}}Users{{/link-to}}</li>
+                    <li>{{#link-to 'rooms'}}Rooms{{/link-to}}</li>
                     <li class="pointer"><a {{ action 'invalidateSession' }}>Logout</a></li>
                 {{else}}
                     <li class="pointer">{{#link-to 'login'}}Login{{/link-to}}</li>

@@ -1,0 +1,5 @@
+{{#each model as |message|}}
+    <div class="row">
+        {{chat-message model=message currentUser=session.session.authenticated.user.id}}
+    </div>
+{{/each}}
