@@ -8,9 +8,7 @@
 module.exports = {
 
   attributes: {
-    name: { type: 'string' },
-    messages: {collection: 'Message'},
-    participants: {collection: 'User'}
+    name: { type: 'string' }
   }
 };
 
