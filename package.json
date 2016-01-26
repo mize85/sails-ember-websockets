@@ -1,5 +1,5 @@
 {
-  "name": "mail-listener",
+  "name": "sails-ember-websockets",
   "version": "0.0.1",
   "description": "A blank sane stack project.",
   "main": "index.js",
